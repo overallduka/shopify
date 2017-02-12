@@ -16,7 +16,7 @@ defmodule Shopify.Request do
     :headers
   ]
 
-  def new(session, path, params \\ %{}, resource, body \\ nil) do
+  def new(session, path, params \\ %{}, resource, body \\ "") do
     %Shopify.Request{
       full_url: session |> build_full_url(path) |> add_query(params),
       path: path,
